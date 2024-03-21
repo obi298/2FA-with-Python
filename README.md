@@ -1,4 +1,4 @@
-# Python-2FA
+# Using OTP with Python
 
 <br>
 <br>
