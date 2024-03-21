@@ -15,7 +15,7 @@
 # Technologies Used
 
 - Python
-- Authenticator Apps (Google Authenticator and Sophos)
+- Authenticator Apps (Microsoft Authenticator)
 
 
 
