@@ -30,3 +30,6 @@ The secrret key was then used in the next code
 
 
 I then created the user's name and issuer name which will be displayed on the authenticator app.
+
+![3](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/65507901-e213-4df2-b4a0-5a7469c4d689)
+
