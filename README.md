@@ -16,7 +16,9 @@ One-Time Password(OTP) is a password that is used for one login session on a use
 - Python
 - Authenticator App (Microsoft Authenticator)
 
-
+<br>
+<br>
+<br>
 
 # Project
 I first imported the required libraries for this project. The required libraries for this project were, **pyotp**, **qrcode** and **getpass**. 
