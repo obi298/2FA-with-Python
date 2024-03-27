@@ -65,8 +65,20 @@ qrcode.make(uri)
 ```
 
 I was able to create a URI and generate a QR code which was scanned with my authenticator app. I decided to use Microsoft Authenticator for this project. 
-As you can see from this image, the username, issuer name, and secret key are all displayed in the URI.
+As you can see from this image, the URI includes the following paremeters:
+<br>
 
+**otpauth://:** Specifies that this URI is for OTP authentication.
+
+**totp:** Specifies that this is a TOTP verification
+
+**issuer:** The name of the application or service generating the token.
+
+**name:** The name of the user
+
+**secret:** Random secret key used to generate a verification code.
+
+<br>
 
 ![4](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/55524e58-6a85-4d05-9821-f01dc10131d0)
 
