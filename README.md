@@ -19,7 +19,7 @@ One-Time Password(OTP) is a password that is used for one login session on a use
 
 
 # Project
-I first imported the required libraries for this project. The required libraries for this project were, pyotp, qrcode and getpass. 
+I first imported the required libraries for this project. The required libraries for this project were, **pyotp**, **qrcode** and **getpass**. 
 
 ```
 import pyotp
