@@ -5,7 +5,9 @@
 <br>
 
 # Introduction
-One-Time Password(OTP) is a password that is used for one login session on a user's device. OTPs can be delivered to users through text messages, authenticator apps, email, and more. It can be used as an additional layer of security for users to confirm their identities. The purpose of this lab is to learn about OTP and how it can be used in real world scenarios.
+
+One-Time Password(OTP) is a password that is used for one login session on a user's device. OTPs can be delivered to users through text messages, authenticator apps, email, and more. It can be used as an additional layer of security for users to confirm their identities. PyOTP is a Python library that is used to generate and verify one-time passwords. It is used to implement MFA solutions in login systems.
+The purpose of this lab was to learn about how 2FA solutions are used in the real world. 
 
 <br>
 <br>
@@ -21,41 +23,64 @@ One-Time Password(OTP) is a password that is used for one login session on a use
 <br>
 
 # Project
-I first imported the required libraries for this project. The required libraries for this project were, **pyotp**, **qrcode** and **getpass**. 
+
+I first installed the required libraries for this project. The required libraries for this project were, **pyotp**, **qrcode**, **getpass** and **time**.
+
+
+**pyotp:** Generates and verifies one-time passwords.
+
+**qrcode:** Creates a qrcode for user to scan with authenticator app.
+
+**getpass:** Encrypts the password when user inputs it.
+
+**time:** Creates a time based sequence for verification.
+
+<br>
+
+```
+pip install pyotp
+pip install qrcode
+pip install getpass
+pip install time
+```
+
+
+Then I imported the libraries in the first lines of this project. 
 
 ```
 import pyotp
 import qrcode
 import getpass
-```
+import time
 
-```
 key = pyotp.random_base32()
 
 print(key)
 ```
 
-This code generated a random secret key which was used for the next code. It changes everytime you execute it.
+I was able to generate a random secret key which was used for the next code. The secret key changes everytime the code is executed.
 
-![1](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/a0149d3d-c436-4768-abb6-f7794f05ba55)
+![1](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/4472bad2-8a11-462c-b559-fc89b3b5b642)
 
+<br>
+<br>
 
-This is an image of me entering the secret key.
-
-![2](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/1d72f98f-72c4-4015-8f1a-1d87ff79aa48)
+In this step, I entered the secret key which was generated from the previous code. 
 
 ```
-key = '4FFL2ENARCIW423Y6SK4JDSJVLT3Q4KI'
+key = ''
 
 totp = pyotp.TOTP(key)
 ```
 
+
+![2](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/1d72f98f-72c4-4015-8f1a-1d87ff79aa48)
+
+
+
 <br>
 
-I then created the user's name and issuer name which was be displayed on the authenticator app. 
-
-
-![3](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/65507901-e213-4df2-b4a0-5a7469c4d689)
+I then created the username and issuer name which was displayed on the authenticator app. 
 
 <br>
 
@@ -65,28 +90,33 @@ print(uri)
 
 qrcode.make(uri)
 ```
+<br>
+<br>
 
-I was able to create a URI and generate a QR code which was scanned with my authenticator app. I decided to use Microsoft Authenticator for this project. 
-As you can see from this image, the URI includes the following paremeters:
+I was able to create a provisioning URI and generate a QR code which was scanned with my mobile authenticator app. The provisioning URI is used to deliver a verification token to a new user or device. 
+
+
+As you can see from this image, the URI contains the following paremeters:
 <br>
 
 **otpauth://:** Specifies that this URI is for OTP authentication.
 
-**totp:** Specifies that this is a TOTP verification
+**totp:** Specifies that this verification is time-based.
 
 **issuer:** The name of the application or service generating the token.
 
-**name:** The name of the user
+**name:** The name of the user.
 
 **secret:** Random secret key used to generate a verification code.
 
+<br>
 <br>
 
 ![4](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/55524e58-6a85-4d05-9821-f01dc10131d0)
 
 
 
-Here is a video of me using Microsoft Authenticator to scan the QR code. After scanning the code, a verification code pops up along with the username and issuer's name.
+I decided to use Microsoft Authenticator for this project. Here is a video of me using Microsoft Authenticator to scan the QR code. A verification code popped up along with the username and issuer's name.
 
 
 
