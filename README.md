@@ -119,6 +119,9 @@ As you can see from this image, the URI contains the following paremeters:
 I decided to use Microsoft Authenticator for this project. Here is a video of me using Microsoft Authenticator to scan the QR code. A verification code popped up along with the username and issuer's name.
 
 
+<br>
+<br>
+
 
 
 
