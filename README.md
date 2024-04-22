@@ -119,7 +119,7 @@ As you can see from this image, the URI contains the following paremeters:
 I decided to use Microsoft Authenticator for this project. After scanning the QR code, a verification code popped up along with the username and issuer's name.
 <br>
 
-<img src="https://github.com/obi298/Using-OTP-with-Python/assets/90945162/fe77be7b-65f5-4221-ba76-56e91dad434e" alt="First Scan Research" width="400" height="700">
+<img src="https://github.com/obi298/Using-OTP-with-Python/assets/90945162/fe77be7b-65f5-4221-ba76-56e91dad434e" alt="First Scan Research" width="400" height="750">
 
 
 
