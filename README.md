@@ -119,8 +119,49 @@ As you can see from this image, the URI contains the following paremeters:
 I decided to use Microsoft Authenticator for this project. After scanning the QR code, a verification code popped up along with the username and issuer's name.
 <br>
 
-<img src="https://github.com/obi298/Using-OTP-with-Python/assets/90945162/fe77be7b-65f5-4221-ba76-56e91dad434e" alt="First Scan Research" width="400" height="850">
+<img src="https://github.com/obi298/Using-OTP-with-Python/assets/90945162/fe77be7b-65f5-4221-ba76-56e91dad434e" alt="First Scan Research" width="300" height="650">
 
+<br>
+<br>
+<br>
+
+I entered the one-time code from Microsoft Authenticator after entering the username and password. 
+<br>
+<br>
+
+```python
+input_username = input('Enter username: ')
+
+password = getpass.getpass("Enter password: ")
+
+input_code =  input("Enter verification code:")
+
+totp.verify(input_code)
+
+print(totp.verify(input_code))
+
+time.sleep(30)
+```
+<br>
+<br>
+
+This was the final result.
+
+<br>
+<br>
+
+![6](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/cecea888-977e-4edb-84be-c32c3d82869b)
+
+
+<br>
+<br>
+<br>
+
+This is the result of entering an incorrect or expired verification code.
+<br>
+<br>
+
+![7](https://github.com/obi298/Using-OTP-with-Python/assets/90945162/b9440f5c-2c9f-44fc-ae98-5ffb63657a76)
 
 
 <br>
@@ -129,6 +170,10 @@ I decided to use Microsoft Authenticator for this project. After scanning the QR
 
 # Conclusion
 
+In this project, I developed my own MFA solution using Python and was able to get it to work with a mobile application. I learned more about the qrcode, getpass, and pyotp libraries and how they can be used in Python.
+
+
+Adding an extra layer of security is a great way for individuals and comapnies to protect themselves from the possibilities of a data breach.
 
 
 
