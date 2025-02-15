@@ -6,7 +6,8 @@
 
 # Introduction
 
-One-Time Password(OTP) is a password that is used for one login session on a user's device. OTPs can be delivered to users through text messages, authenticator apps, email, and more. It can be used as an additional layer of security for users to confirm their identities. PyOTP is a Python library that is used to generate and verify one-time passwords. It is used to implement MFA solutions in login systems.
+One-Time Password(OTP) is used for one login session on a user's device. OTPs can be delivered to users through text messages, authenticator apps, email, and more. It can be used as an additional layer of security for users to confirm their identities. PyOTP is a Python library that is used to generate and verify one-time passwords. It is used to implement MFA solutions in login systems.
+
 The purpose of this lab was to learn about how 2FA solutions are used in the real world. 
 
 <br>
